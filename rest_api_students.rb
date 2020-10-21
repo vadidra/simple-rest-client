@@ -6,9 +6,8 @@ URL = 'https://spring-boot-students.herokuapp.com/api/students'
 
 class StudentsAPI
 
-  def initialize(url)
-    @url = url
-    response = RestClient.get @url, {accept: :json}
+  def initialize()
+    response = RestClient.get URL, {accept: :json}
     student_data = JSON.parse(response.body)
     @students_array = []
     student_data.each do |student1|
@@ -26,6 +25,6 @@ class StudentsAPI
 end
 
 
-students = StudentsAPI.new URL
-puts students.get_list
-puts students.get_number
+#students = StudentsAPI.new
+#puts students.get_list
+#puts students.get_number
