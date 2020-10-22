@@ -5,7 +5,7 @@ class StudentsTest < Minitest::Test
 
   def test_student_number
     students = StudentsAPI.new
-    assert_equal 5, students.get_number
+    assert_equal 5, students.number
   end
 
   def test_pass

@@ -16,12 +16,12 @@ class StudentsAPI
     @student_data.map{ |student1| Student.new(student1['id'], student1['firstName'], student1['lastName'], student1['course'])}
   end
 
-  def get_list
+  def all
     #@students_array
     @student_data
   end
 
-  def get_number
+  def number
     #@students_array.length
     @student_data.length
   end
@@ -29,6 +29,6 @@ end
 
 if __FILE__ == $0
   students = StudentsAPI.new
-  puts students.get_list
-  puts students.get_number
+  puts students.all
+  puts students.number
 end
